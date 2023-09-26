@@ -1,0 +1,24 @@
+{
+    "configurations": [
+        {
+            "name": "Win32",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "${workspaceFolder}/",
+                "${workspaceFolder}/src/Buttom",
+                "${workspaceFolder}/src/Bonus",
+                "${workspaceFolder}/src/Window",
+                "${workspaceFolder}/src/stdafx",
+
+                "C:\\SFML-2.6.0\\include"
+            ],
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE"
+            ],
+            "intelliSenseMode": "windows-msvc-x64"
+        }
+    ],
+    "version": 4
+}
