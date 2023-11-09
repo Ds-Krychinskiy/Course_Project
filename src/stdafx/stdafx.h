@@ -1,3 +1,4 @@
+#pragma one 
 #include <stdlib.h>
 #include <iostream>
 #include <string.h>
@@ -11,5 +12,3 @@
 #include <SFML/Window/Event.hpp>
 
 
-using namespace std;
-using namespace sf;

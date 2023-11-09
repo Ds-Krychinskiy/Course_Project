@@ -9,13 +9,13 @@ Health_points::~Health_points()
 }
 
 const int &Health_points::getHp() const
-{
-    // TODO: вставьте здесь оператор return
+{   
+    return this->hp;
 }
 
 const int &Health_points::getHpMax() const
 {
-    // TODO: вставьте здесь оператор return
+    return this->hpMax;
 }
 
 void Health_points::move(const float dirX, const float dirY)

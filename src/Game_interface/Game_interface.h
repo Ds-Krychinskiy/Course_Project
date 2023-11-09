@@ -1,4 +1,4 @@
-#include "stdafx.h"
+#include "../stdafx/stdafx.h"
 
 class Game_interface
 {

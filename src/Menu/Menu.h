@@ -1,16 +1,15 @@
-#include "stdafx.h"
-
-#include "Buttom.h"
+#include "../stdafx/stdafx.h"
+#include "../Buttom/Buttom.h"
 
 class Menu
 {
 private:
-    vector<string> labelButton;
+    std::vector<std::string> labelButton;
     sf::Texture textureButton;
 public:
-    Menu(string labelButton);
+    Menu(std::string labelButton);
     ~Menu();
     void render(sf::RenderTarget& target);
-    void inintTexture();
+    void initTexture();
 };
 

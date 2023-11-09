@@ -1,6 +1,5 @@
-#include "stdafx.h"
-
-#include "Bonus.h"
+#include "../stdafx/stdafx.h"
+#include "../Bonus/Bonus.h"
 
 class Levels
 {
