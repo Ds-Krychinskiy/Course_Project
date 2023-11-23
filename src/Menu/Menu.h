@@ -1,5 +1,5 @@
 #include "../stdafx/stdafx.h"
-#include "../Buttom/Buttom.h"
+#include "../Button/Button.h"
 
 class Menu
 {

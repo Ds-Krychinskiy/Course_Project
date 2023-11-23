@@ -2,7 +2,7 @@
 
 int main() 
 {   
-
+    srand(time(static_cast<unsigned>(0)));
     Windows windows;
     while(windows.getWindows().isOpen())
     {

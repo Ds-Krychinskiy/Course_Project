@@ -6,7 +6,9 @@ class Game
     private: 
     sf::Event event;
     bool pause;
+    
 
+    
     public:
     Game();
     virtual ~Game();

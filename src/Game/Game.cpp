@@ -3,11 +3,14 @@
 
 Game::Game() : pause{true}
 { 
+
 }
 
 Game::~Game()
 {
 }
+
+
 
 void Game::stop_the_game()
 {
