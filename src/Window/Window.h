@@ -1,7 +1,7 @@
 #pragma once
 #include "../stdafx/stdafx.h"
-#include "../PrimaryMenu/Primary_Menu.h"
-#include "../Player/Player.h"
+#include "../GUI_source/Primary_Menu/Primary_Menu.h"
+#include "../Player_source/Player/Player.h"
 
 
 class Windows
@@ -15,7 +15,6 @@ private:
     sf::Sprite world_background;
     sf::Image image_bg;
 
-    Player player;
 
     Primary_Menu* primary_menu;
     std::vector<sf::String> label_menu;

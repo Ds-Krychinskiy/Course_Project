@@ -54,6 +54,6 @@ void Windows::render()
     this->window.clear();
     this->window.draw(this->world_background);
     this->primary_menu->draw(this->window);
-    this->player.render(this->window);
+    
     this->window.display();
 }

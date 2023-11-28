@@ -18,36 +18,51 @@ set(CMAKE_CXX_STANDART 17)
 add_executable(
     ${PROJECT_NAME} 
     main.cpp
-    src/Bonus/Bonus.h
-    src/Button/Button.h
-    src/Enemy/Enemy.h
+
+    src/Level_source/Bonus/Bonus.h
+    src/Level_source/Bonus/Bonus.cpp
+
+    src/Level_source/Enemy/Enemy.h
+    src/Level_source/Enemy/Enemy.cpp
+
+    src/Level_source/Levels/Levels.h
+    src/Level_source/Levels/Levels.cpp
+
+    src/Level_source/Platforms/Platforms.h
+    src/Level_source/Platforms/Platforms.cpp
+    
+    src/GUI_source/Game_interface/Game_interface.h
+    src/GUI_source/Game_interface/Game_interface.cpp
+
+    src/GUI_source/Health_Bar/Health_Bar.h
+    src/GUI_source/Health_Bar/Health_Bar.cpp
+
+    src/GUI_source/Number_of_Coins/Number_of_Coins.h
+    src/GUI_source/Number_of_Coins/Number_of_Coins.cpp
+
+    src/Player_source/Player/Player.h
+    src/Player_source/Player/Player.cpp
+
+    src/Player_source/Physics/Physics.h
+    src/Player_source/Physics/Physics.cpp
+
+    src/Player_source/Health_Points/Health_Points.h
+    src/Player_source/Health_Points/Health_Points.cpp
+
     src/Game/Game.h
-    src/Levels/Levels.h
-    src/Game_interface/Game_interface.h
-    src/Health_points/Health_points.h
-    src/Menu/Menu.h
-    src/PrimaryMenu/Primary_Menu.h
-    src/Physics/Physics.h
-    src/Player/Player.h
-    src/stdafx/stdafx.h
-    src/Window/Window.h
-    texture/owl.png
-
-    src/Button/Button.cpp
-    src/Enemy/Enemy.cpp
     src/Game/Game.cpp
-    src/Levels/Levels.cpp
-    src/Game_interface/Game_interface.cpp
-    src/Health_points/Health_points.cpp
-    src/Menu/Menu.cpp
-    src/PrimaryMenu/Primary_Menu.cpp
-    src/Physics/Physics.cpp
-    src/Player/Player.cpp
-    src/stdafx/stdafx.cpp
-    src/Window/Window.cpp
-    src/Bonus/Bonus.cpp
 
-    )
+    src/GUI_source/Primary_Menu/Primary_Menu.h
+    src/GUI_source/Primary_Menu/Primary_Menu.cpp
+
+    src/stdafx/stdafx.h
+    src/stdafx/stdafx.cpp
+
+    src/Window/Window.h
+    src/Window/Window.cpp
+
+)
+
 target_link_libraries(${PROJECT_NAME} sfml-graphics sfml-window sfml-audio sfml-network sfml-system)
 
 

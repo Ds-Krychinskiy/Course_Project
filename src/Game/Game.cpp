@@ -3,7 +3,8 @@
 
 Game::Game() : pause{true}
 { 
-
+    this->game_interface = Game_interface();
+    this->player = new Player();
 }
 
 Game::~Game()
