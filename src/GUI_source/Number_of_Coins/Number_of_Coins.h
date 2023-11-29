@@ -1,3 +1,5 @@
+#pragma once
+
 #include "../../stdafx/stdafx.h"
 
 class Number_of_Coins

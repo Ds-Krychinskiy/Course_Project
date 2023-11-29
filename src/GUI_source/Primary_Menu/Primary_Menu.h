@@ -26,7 +26,7 @@ public:
 
     ~Primary_Menu();
 
-	void draw(sf::RenderWindow& window);                                     
+	void draw(sf::RenderWindow &window);                                     
 
 	void MoveUp();                                   
 

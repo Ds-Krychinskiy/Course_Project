@@ -77,7 +77,7 @@ void Primary_Menu::MoveDown()
 }
 
 
-void Primary_Menu::draw(sf::RenderWindow& window)
+void Primary_Menu::draw(sf::RenderWindow &window)
 {
 	for (int i = 0; i < this->max_menu; i++) window.draw(this->mainMenu[i]);
 }

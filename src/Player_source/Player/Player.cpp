@@ -5,26 +5,37 @@ Player::Player()
     this->movementSpeed = 5.f;
     this->attackCooldownMax = 10.f;
     this->attackCooldown = this->attackCooldownMax;
-
-    this->image_player.loadFromFile("../../texture/owl.png");
-
-    if(!this->texture_player.loadFromImage(this->image_player))
-    {
-        std::cout << "ERROR::PLAYER::INITTEXTURE:: Could not load texture file." << "\n";
-    }
-
-    this->sprite_player.setTexture(this->texture_player);
+    this->initImage();
+    this->initTexture();
+    this->initSprite();
 }
 
 Player::~Player()
 {
 }
 
-
-void Player::render(sf::RenderTarget &window)
+void Player::initImage()
 {
-    window.draw(this->sprite_player);
+    this->image_player.loadFromFile("../texture/owl.png");
 }
+
+void Player::initTexture()
+{
+    if(!this->texture_player.loadFromImage(this->image_player))
+    {
+        std::cout << "ERROR::PLAYER::INITTEXTURE:: Could not load texture file." << "\n";
+    }
+}
+
+void Player::initSprite()
+{   
+    this->sprite_player.setTexture(this->texture_player);
+    this->currentFrame = sf::IntRect(75,100,80,35);
+
+    this->sprite_player.setTextureRect(this->currentFrame);
+    this->sprite_player.setScale(2.5, 2.5);
+}
+
 
 const sf::Vector2f &Player::getPos() const
 {
@@ -52,7 +63,79 @@ const sf::Sprite Player::get_sprite_player() const
     return this->sprite_player;
 }
 
-void Player::move(const float dirX, const float dirY)
+
+
+void Player::move(const float pos_x, const float pos_y) 
 {
-    this->sprite_player.move(this->movementSpeed * dirX, this->movementSpeed * dirY);
+    this->sprite_player.move(this->movementSpeed * pos_x, this->movementSpeed * pos_y);
+}
+
+void Player::player_position_changes()
+{
+    if(sf::Keyboard::isKeyPressed(sf::Keyboard::A))
+    {
+        int xTexture = 38;
+        xTexture = static_cast<int>(sprite_player.getPosition().x ) / 50 % 3;
+        xTexture *= 80;
+        this->currentFrame = sf::IntRect(xTexture,50,80,40);
+
+        // this->currentFrame = sf::IntRect(xTexture,5,35,35);
+        this->sprite_player.setTextureRect(this->currentFrame);
+        this->move(-1.f, 0.f);
+    }
+    if(sf::Keyboard::isKeyPressed(sf::Keyboard::D))
+    {   
+        int xTexture = 75;
+        xTexture = static_cast<int>(sprite_player.getPosition().x ) / 50 % 3;
+        xTexture *= 80;
+        this->currentFrame = sf::IntRect(xTexture,100,80,40);
+        this->sprite_player.setTextureRect(this->currentFrame);
+        this->move(1.f, 0.f);
+    }
+    if(sf::Keyboard::isKeyPressed(sf::Keyboard::W))
+    {   
+        int xTexture = 75;
+        xTexture = static_cast<int>(sprite_player.getPosition().y ) / 50 % 3;
+        xTexture *= 80;
+        this->currentFrame = sf::IntRect(xTexture,140,77,50);
+        // this->currentFrame = sf::IntRect(20,yTexture,35,35);
+        this->sprite_player.setTextureRect(this->currentFrame);
+        this->move(0.f, -1.f);
+    }
+    if(sf::Keyboard::isKeyPressed(sf::Keyboard::S))
+    {
+        int xTexture = 0;
+        xTexture = static_cast<int>(sprite_player.getPosition().y ) / 50 % 3;
+        xTexture *= 80;
+        this->currentFrame = sf::IntRect(xTexture,0,80,50);
+        this->sprite_player.setTextureRect(this->currentFrame);
+        this->move(0.f, 1.f);
+    }
+    // if(sf::Mouse::isButtonPressed(sf::Mouse::Left) && this->player->canAttack())
+    // {
+    //     this->bullets.push_back(
+    //         new Bullet(
+    //             this->textures["BULLET"],
+    //             this->player->getPos().x, 
+    //             this->player->getPos().y, 
+    //             0.f, 
+    //             -1.f, 
+    //             5.f
+    //             )
+    //         );
+    // }
+}
+
+void Player::player_animation()
+{
+}
+
+void Player::update()
+{
+}
+
+void Player::render(sf::RenderTarget &window)
+{
+    window.draw(this->sprite_player);
+    this->player_position_changes();
 }

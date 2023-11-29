@@ -9,15 +9,13 @@ Windows::Windows()
     if(!this->world_background_tex.loadFromImage(this->image_bg))
     {
         std::cout << "File upload failed" << std::endl;
-    } else
-    {
-        std::cout << !this->world_background_tex.loadFromFile("texture/libra.jpg") << std::endl;
-    }
+    } 
     this->world_background.setTexture(this->world_background_tex);
     this->label_menu = {"Play", "Option", "About", "Exit"};
     this->primary_menu = new Primary_Menu(950, 100, 100, 100,this->label_menu);
     this->primary_menu->setColorTextMenu(sf::Color(237, 147, 0), sf::Color::Red, sf::Color::Black);
     this->primary_menu->AlignMenu(1);
+
 }
 
 
@@ -54,6 +52,7 @@ void Windows::render()
     this->window.clear();
     this->window.draw(this->world_background);
     this->primary_menu->draw(this->window);
-    
+    this->player.render(this->window);    
+    // this->game.render(this->window);
     this->window.display();
 }

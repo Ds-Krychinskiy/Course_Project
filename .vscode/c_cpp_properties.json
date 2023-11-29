@@ -5,17 +5,14 @@
             "includePath": [
                 "${workspaceFolder}/**",
                 "${workspaceFolder}/",
-                "${workspaceFolder}/src/Button",
-                "${workspaceFolder}/src/Bonus",
-                "${workspaceFolder}/src/Window",
-                "${workspaceFolder}/src/stdafx"
+                "${workspaceFolder}/src/Player_source/Health_Points/**"
             ],
             "defines": [
                 "_DEBUG",
                 "UNICODE",
                 "_UNICODE"
             ],
-            "intelliSenseMode": "linux-g++-x64"
+            "intelliSenseMode": "linux-clang-x64"
         }
     ],
     "version": 4

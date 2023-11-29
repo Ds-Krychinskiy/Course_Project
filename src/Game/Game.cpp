@@ -3,8 +3,8 @@
 
 Game::Game() : pause{true}
 { 
-    this->game_interface = Game_interface();
-    this->player = new Player();
+    this->game_interface = new Game_interface();
+    this->player = Player();
 }
 
 Game::~Game()
@@ -19,4 +19,13 @@ void Game::stop_the_game()
     {
         this->pause = true;
     }
+}
+
+void Game::update()
+{
+}
+
+void Game::render(sf::RenderTarget &window)
+{
+    this->player.render(window);
 }

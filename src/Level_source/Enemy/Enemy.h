@@ -1,3 +1,4 @@
+#pragma once
 #include "../../stdafx/stdafx.h"
 
 class Enemy
@@ -30,6 +31,6 @@ public:
     const int &getDamage() const;
     //Functions
     void update();
-    void render(sf::RenderTarget* target);
+    void render(sf::RenderTarget& target);
 };
 
