@@ -8,6 +8,7 @@ private:
     sf::Sprite sprite_player;
     sf::Texture texture_player; 
     sf::Image image_player;
+    
     sf::IntRect currentFrame;
 
     Health_Points health_points;

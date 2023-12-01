@@ -16,7 +16,7 @@ Player::~Player()
 
 void Player::initImage()
 {
-    this->image_player.loadFromFile("../texture/owl.png");
+    this->image_player.loadFromFile("../texture/orc.jpg");
 }
 
 void Player::initTexture()
@@ -79,7 +79,6 @@ void Player::player_position_changes()
         xTexture *= 80;
         this->currentFrame = sf::IntRect(xTexture,50,80,40);
 
-        // this->currentFrame = sf::IntRect(xTexture,5,35,35);
         this->sprite_player.setTextureRect(this->currentFrame);
         this->move(-1.f, 0.f);
     }
@@ -98,7 +97,6 @@ void Player::player_position_changes()
         xTexture = static_cast<int>(sprite_player.getPosition().y ) / 50 % 3;
         xTexture *= 80;
         this->currentFrame = sf::IntRect(xTexture,140,77,50);
-        // this->currentFrame = sf::IntRect(20,yTexture,35,35);
         this->sprite_player.setTextureRect(this->currentFrame);
         this->move(0.f, -1.f);
     }
