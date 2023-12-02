@@ -16,7 +16,7 @@ Player::~Player()
 
 void Player::initImage()
 {
-    this->image_player.loadFromFile("../texture/orc.jpg");
+    this->image_player.loadFromFile("../texture/owl.png");
 }
 
 void Player::initTexture()
