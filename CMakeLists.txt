@@ -58,9 +58,6 @@ add_executable(
     src/stdafx/stdafx.h
     src/stdafx/stdafx.cpp
 
-    src/Window/Window.h
-    src/Window/Window.cpp
-
 )
 
 target_link_libraries(${PROJECT_NAME} sfml-graphics sfml-window sfml-audio sfml-network sfml-system)
